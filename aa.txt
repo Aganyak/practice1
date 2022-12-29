@@ -1,0 +1,24 @@
+ 50  sudo vi pod.yaml
+   51  kubectl apply -f https://k8s.io/examples/pods/simple-pod.yaml
+   52  kubectl get nodes
+   53  kubectl get pods
+   54  kubectl get pods -o wide
+   55  sudo vi dep.yaml
+   56  kubectl apply -f dep.yml
+   57  kubectl apply -f dep.yaml
+   58  kubectl get pods
+   59  kubectl get pods -o wide
+   60  kubectl delete pod nginx-deployment-85996f8dbd-8bs46
+   61  kubectl get pods -o wide
+   62  kubectl delete deploy nginx-deployment
+   63  kubectl get deploy
+   64  kubectl get pods -o wide
+   65  history
+https://github.com/Aganyak/practice1.git
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Aganyak/practice1.git
+git push -u origin main

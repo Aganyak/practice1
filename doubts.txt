@@ -1,0 +1,121 @@
+set user and password.
+
+401 error: not changed any configuration files please examine conf/tomcat-users.xml
+ user: and password need to set
+tomcat is only for war files
+three types of repo in maven
+central repo
+local repo
+remote repo
+
+maven code in local path?
+c:users dell .m2 repo
+Environments available in organization
+3 environments
+1 test environment
+2 uat /pre-prod/dev:uat(user acceptance testing, preproduction,development)
+3 production environment
+as a devops engineer we need to deploy code from git hub to testing environment
+     downloand
+      build
+      mvn install
+      /target/jar war files need to up into linux server
+
+then we need to say to testing team that we did build.
+mvn archetype:generate
+mvn archetype:generate > fs.output
+access token
+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
+
+how to clone private repo
+
+by using access token we can use private repo to servers
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/software_packages/apache-maven-3.8.6
+export MAVEN_HOME=/opt/software_packages/apache-maven-3.8.6
+export PATH=${M2_HOME}/bin:${PATH}
+
+export JAVA_HOME=/opt/software_packages/jdk-18.0.2.1
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+
+have you devolped pom file : No
+pom: project object model.
+
+2) linux server have local repo what is that path:ls -al
+3)maven goals
+
+ validate: check if all information necessary for the build is available
+compile: compile the source code
+test-compile: compile the test source code
+test: run unit tests
+package: package compiled source code into the distributable format (jar, war, …)
+integration-test: process and deploy the package if needed to run integration tests
+install: install the package to a local repository
+deploy: copy the package to the remote repository
+
+while developer develop code in local code sucessfully complied
+but when he is push to linux error he getting error. why?
+
+
+
+
+
+tomcat in which path u r deploying? webapps
+
+port number for ssh 22 we cant change this port number
+windows   3389
+mysql   3306 cant change
+tomcat 8080
+jenkins 8080
+
+port numbers can change
+
+
+copy tar link to download tomcat and paste in mobexterm where u need to download
+opt/s/w/
+here
+
+then unzip tar file
+rename tomcat file
+ troble shoot: in serve tomcat is running
+
+when u trying to connect to tomcat server from outside using port number if u find error
+Site cant be reached
+then go to instances in AWS
+go to ur instance- securitygroups-inbound
+change/add the port number
+
+
+
+tomcat 401 error to retify
+<tomcat-users>
+<role rolename="manager-gui"/>
+<user username="admin" password="Admin" roles="manager-gui, manager-script, manager-admin, manager-status"/>
+</tomcat-users>
+
+
+deploying War file
+Source file:/opt/services/war_file/target/webapp.war
+destinatiom file:/opt/software_packages/tomcat-9/webapps
+
+to move file to another location then we will use CP command on linux
+
+
+sudo cp /opt/services/war_file/target/webapp.war /opt/software_packages/tomcat-9/webapps
+
+
+jenkins link:http://54.210.99.242:9090/jenkins/
+
+
+
+
+
+
+
+
+
+
+
